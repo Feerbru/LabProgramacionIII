@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace matrices
+namespace Matrices
 {/*
      * Alumno: Fernando Matias Bruzzo - TUP 2020
      * 
