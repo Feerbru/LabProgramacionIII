@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace Poo1
 {
@@ -13,17 +14,42 @@ namespace Poo1
 
     class Libro
     {
-        private string titulo { get; set; }
-        private string autor { get; set; }
-        private int nroDePaginas { get; set; }
-        private int calificacion { get; set; }
+        public string Titulo { get; set; }
+        public string Autor { get; set; }
+        public int NroDePaginas { get; set; }
+
+        private int calificacion;
+
+        public int Calificacion
+        {
+            get { return calificacion; }
+            set
+            {
+                if (value < 11)
+                {
+                    Calificacion = value;
+                }
+                else
+                {
+                    WriteLine("el nro tiene que estar dentro del rango 0 - 10.");
+                    this.Calificacion = int.Parse(ReadLine());
+                }
+            }
+        }
+
 
         public Libro(string titulo, string autor, int nroDePaginas, int calificacion)
         {
-            this.titulo = titulo;
-            this.autor = autor;
-            this.nroDePaginas = nroDePaginas;
+            this.Titulo = titulo;
+            this.Autor = autor;
+            this.NroDePaginas = nroDePaginas;
             this.calificacion = calificacion;
+        }
+        public Libro() { }
+
+        public override string ToString()
+        {
+            return "Titulo: " + Titulo + "\n" + "Autor: " + Autor + "\n"+ "Paginas: " + NroDePaginas + "\n";
         }
     }
 }

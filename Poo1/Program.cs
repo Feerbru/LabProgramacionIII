@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace Poo1
 {
@@ -24,6 +25,23 @@ namespace Poo1
     {
         static void Main(string[] args)
         {
+
+            ConjuntoLibros conjuntoLibros = new ConjuntoLibros(2);
+
+            conjuntoLibros.Añadir("C#", "Matheu Ford", 56, 9);
+            conjuntoLibros.Añadir("Css", "Marcos Palma", 156, 1);
+
+            conjuntoLibros.Mostrar();
+
+            conjuntoLibros.Eliminar();
+            conjuntoLibros.Eliminar();
+
+            conjuntoLibros = new ConjuntoLibros(1);
+            conjuntoLibros.Añadir("Code","Saint Freud",44,6);
+
+            conjuntoLibros.Mostrar();
+            ReadKey();
         }
+
     }
 }
